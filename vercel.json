@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
     "api/cron.go": {
-      "runtime": "go1.x",
       "memory": 1024,
       "maxDuration": 60
     }
