@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/cron.go": {
+      "runtime": "go1.x",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "0 */8 * * *"
+    }
+  ],
+  "env": {
+    "STREAMLIT_APPS": "[\"https://f1nalyze.streamlit.app/\", \"https://robotic-arm-rl.streamlit.app/\"]"
+  },
+  "regions": ["iad1"]
+}
